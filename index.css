@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+
+  --color-bg: #050810;
+  --color-surface: #0c1122;
+  --color-card: #111827;
+  --color-accent: #6c63ff;
+  --color-accent-2: #ff6b6b;
+  --color-accent-3: #43e8d8;
+  --color-gold: #f5c842;
+  --color-text: #e8eaf0;
+  --color-muted: #7a8099;
+
+  --background-image-background-grad: linear-gradient(135deg, #6c63ff 0%, #43e8d8 100%);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-grad {
+    @apply bg-clip-text text-transparent bg-background-grad;
+  }
+  .border-glass {
+    @apply border border-white/10;
+  }
+  .bg-glass {
+    @apply bg-white/5 backdrop-blur-xl;
+  }
+}
